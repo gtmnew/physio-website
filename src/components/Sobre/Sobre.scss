@@ -1,0 +1,177 @@
+.about-container {
+  background: #e7e6e6;
+  color: #000;
+  overflow: hidden;
+
+  .about-title {
+    text-align: center;
+    padding-top: 7.5rem;
+    h3 {
+      font-weight: 500;
+    }
+  }
+
+  .about-content {
+    position: relative;
+    z-index: 1;
+    .img-wrapper {
+      position: absolute;
+      top: 40px;
+      right: 10px;
+      bottom: 0;
+      width: 14%;
+      height: 100%;
+      background-image: url("https://upload.wikimedia.org/wikipedia/commons/a/af/Physiotherapy_symbol.svg");
+      background-size: cover;
+      background-position: center;
+      opacity: 0.5;
+    }
+    .about {
+      display: flex;
+      align-items: center;
+      text-align: center;
+      margin-left: 5rem;
+      margin-top: 0.5rem;
+      width: 85%;
+      height: 150px;
+      font-size: 1.2rem;
+      font-weight: 600;
+
+      p {
+        font-size: 1.3rem;
+        font-weight: 500;
+      }
+    }
+
+    .about-infos {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10rem;
+      padding-bottom: 2rem;
+
+      h2 {
+        text-align: center;
+        padding-bottom: 1rem;
+      }
+
+      li {
+        font-size: 1.1rem;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .about-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 0;
+
+    img {
+      border-radius: 2rem;
+    }
+  }
+}
+
+//Breakpoints
+
+$breakpoint-mobile: 600px;
+$breakpoint-tablet: 1024px;
+
+// Media
+
+@media (max-width: $breakpoint-tablet) {
+  .about-container {
+    .about-content {
+      .img-wrapper {
+        display: none;
+      }
+
+      .about {
+        margin-left: 2rem;
+        font-size: 1rem;
+
+        p {
+          margin-left: 3.5rem;
+          font-size: 1.1rem;
+        }
+      }
+
+      .about-infos {
+        flex-direction: column;
+        gap: 2rem;
+
+        ul {
+          min-width: 75%;
+        }
+      }
+    }
+
+    .about-image {
+      margin: 1rem 0;
+
+      img {
+        width: 80%;
+        margin-bottom: 2rem;
+      }
+    }
+  }
+}
+
+@media (max-width: $breakpoint-mobile) {
+  .about-container {
+    h2 {
+      margin-top: 1rem;
+    }
+    .about-title {
+      h3 {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+      }
+    }
+
+    .about-content {
+      p {
+        text-align: justify;
+        margin-left: 1.5rem;
+      }
+      .img-wrapper {
+        display: none;
+      }
+
+      .about {
+        margin-left: 1rem;
+
+        padding-top: 2rem;
+
+        p {
+          padding-bottom: 2rem;
+          font-size: 0.9rem;
+        }
+      }
+
+      .about-infos {
+        gap: 2rem;
+        margin-left: 2rem;
+
+        ul {
+          padding: 0 3rem;
+          min-width: 410px;
+        }
+
+        li {
+          font-size: 0.9rem;
+        }
+      }
+    }
+
+    .about-image {
+      margin: 0.5rem 0.5rem 2rem;
+
+      img {
+        width: 90%;
+      }
+    }
+  }
+}

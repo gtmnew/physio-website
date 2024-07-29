@@ -1,0 +1,200 @@
+.contact-container {
+  background: #ededed;
+  .contact-title {
+    padding-top: 1rem;
+    text-align: center;
+    grid-column: 1;
+
+    h3 {
+      font-weight: 400;
+    }
+  }
+  .local-infos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    color: #424242;
+    background: #f2f2f2;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 2rem 0 4rem 0;
+  }
+
+  .address-local {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+  .address,
+  .telephones,
+  .map {
+    flex-basis: calc(33.33% - 20px);
+    padding: 20px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    height: 350px;
+
+    h3 {
+      text-align: center;
+      margin-bottom: 0.5rem;
+    }
+  }
+  .map iframe {
+    width: 100%;
+    height: 100%;
+  }
+  .telephones ul {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 3rem;
+
+    li {
+      font-size: 1.3rem;
+    }
+
+    .icon {
+      color: black;
+    }
+  }
+
+  .instagram-btn {
+    margin: 0 auto;
+    padding: 0.5rem 2rem;
+    border: 2px solid #ff87e1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    transition: transform 0.2s ease;
+    background: linear-gradient(
+      135deg,
+      #405de6,
+      #833ab4,
+      #c13584,
+      #fd1d1d,
+      #f56040,
+      #f77737,
+      #fcaf45,
+      #ffdc80,
+      #ffdc80
+    );
+
+    .icon-container {
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+
+      .icon {
+        font-size: 35px;
+        color: white;
+        border-radius: 50px;
+      }
+    }
+
+    span {
+      margin-left: 0.5rem;
+      color: white;
+      font-size: 1rem;
+      font-weight: bold;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+// Breakpoints
+$breakpoint-mobile: 600px;
+$breakpoint-tablet: 900px;
+
+// Media
+
+@media (max-width: $breakpoint-tablet) {
+  .contact-container {
+    .local-infos {
+      flex-direction: column;
+      align-items: center;
+      padding: 0 1rem;
+    }
+
+    .address,
+    .telephones,
+    .map {
+      flex-basis: 100%;
+      height: auto;
+      margin-bottom: 2rem;
+      padding: 1rem;
+
+      h3 {
+        font-size: 1.2rem;
+      }
+    }
+
+    .map iframe {
+      height: 300px;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-mobile) {
+  .contact-container {
+    padding: 1rem 0;
+
+    .contact-title {
+      h3 {
+        font-size: 0.9rem;
+      }
+    }
+
+    .local-infos {
+      margin: 1rem 0 2rem 0;
+    }
+
+    .address,
+    .telephones,
+    .map {
+      padding: 0.5rem;
+
+      .address-text {
+        font-size: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .address-local {
+          font-style: italic;
+          font-size: 0.9rem;
+        }
+      }
+    }
+
+    .telephones ul li {
+      font-size: 1.1rem;
+    }
+
+    .instagram-btn {
+      padding: 0.5rem 1rem;
+      border-radius: 10px;
+
+      .icon-container {
+        width: 40px;
+        height: 40px;
+
+        .icon {
+          font-size: 30px;
+        }
+      }
+
+      span {
+        font-size: 0.9rem;
+      }
+    }
+  }
+}
