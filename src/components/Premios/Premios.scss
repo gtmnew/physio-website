@@ -156,22 +156,23 @@ $breakpoint-tablet: 1024px;
       }
     }
     .prizes {
-      flex-direction: row;
-      align-items: center;
+      flex-direction: column;
+      padding: 0 1rem;
+      gap: 5rem;
 
       .all-prizes {
-        max-width: 450px;
+        max-width: 100%;
       }
 
       .all-recognition {
-        max-width: 400px;
+        max-width: 100%;
       }
       ul {
         font-size: 1.1rem;
       }
 
       li {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
       }
     }
 
